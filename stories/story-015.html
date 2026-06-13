@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>เรื่อง พระอุบลวรรณาเถรี — นิทานธรรมบท</title>
+  <link rel="icon" href="../รูป/img11.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-logo">
+        <img src="../รูป/img11.png" alt="นิทานธรรมบท" width="36" height="36">
+        <span>นิทานธรรมบท</span>
+      </a>
+
+      <div class="nav-actions">
+        <div class="nav-search">
+          <input type="text" id="searchInput" placeholder="ค้นหา..." aria-label="ค้นหานิทาน">
+          <button onclick="searchStories()" aria-label="ค้นหา">🔍</button>
+        </div>
+
+        <nav class="nav-menu" id="nav-links">
+          <a href="../index.html">หน้าแรก</a>
+          <a href="../stories.html">นิทานทั้งหมด</a>
+          <a href="stories1.html">วิดิโอนิทาน</a>
+          <a href="../about.html">เกี่ยวกับเรา</a>
+          <a href="../login.html">เข้าสู่ระบบ</a>
+        </nav>
+
+        <button class="theme-toggle" onclick="toggleTheme()" id="themeToggle" aria-label="เปลี่ยนธีม">
+          <span id="themeIcon">☀️</span>
+        </button>
+
+        <button class="mobile-toggle" onclick="toggleMobileMenu()" id="mobileMenuBtn" aria-label="เมนู">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge">นิทานธรรมบท</span>
+        <h1 class="hero-title">เรื่อง พระอุบลวรรณาเถรี</h1>
+        <p class="hero-desc">"เมื่อความงามอันล่มเมืองกลายเป็นบ่วงรัดรั้ง จนต้องสละโลกรสสู่ร่มเงาแห่งกาสาวพัสตร์! เรื่องราวของนางอุบลวรรณา หญิงงามผู้มีผิวพรรณผุดผ่องดั่งสีดอกอุบลเขียว ที่พระราชาและมหาเศรษฐีทั่วทั้งชมพูทวีปต่างส่งเครื่องบรรณาการมาแย่งชิง สู่กุศโลบายของบิดาที่ชวนบวชเพื่อตัดปัญหา และการบรรลุอรหันต์ผู้ทรงฤทธิ์เหนือม่านหมอกแห่งกิเลส"</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STORY CONTENT ===== -->
+  <main class="container">
+    <div class="stories-section" style="max-width: 800px; margin: 0 auto;">
+
+      <!-- Image Placeholder -->
+      <div class="story-banner" style="text-align: center; margin-bottom: 3rem;">
+        <img src="../รูป/story-015.png" alt="รูปประกอบนิทาน" style="width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border);">
+      </div>
+
+      <!-- Story Text -->
+      <div class="modal-body" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2.5rem;">
+        <div class="story-text">
+          <p><strong>[เนื้อเรื่องส่วนที่ 1: หญิงงามผิวอุบลเขียว และศึกชิงนางระดับแผ่นดิน]</strong></p>
+          <p>ในเมืองสาวัตถี มีมหาเศรษฐีตระกูลหนึ่งได้คลอดบุตรสาวที่มีความพิเศษตรงที่ นางมีผิวพรรณละเอียดอ่อนและมีสีผิวผุดผ่องคล้ายกับสีของ "กลีบดอกอุบลเขียว" (ดอกบัวขาบ) บิดามารดาจึงตั้งชื่อให้นางว่า "อุบลวรรณา" เมื่อนางเจริญวัยเติบโตเป็นสาว ความงดงามของนางก็เลื่องลือไปทั่วทั้งชมพูทวีป จนทำให้พระราชาและมหาเศรษฐีจากเมืองต่าง ๆ ส่งพราหมณ์และเครื่องบรรณาการล้ำค่ามาสู่ขอนางจากบิดาอย่างไม่ขาดสาย บิดาของนางเกิดความเครียดและหนักใจมาก เพราะถ้าหากยกนางให้แก่ใครคนใดคนหนึ่ง เมืองอื่น ๆ หรือเศรษฐีคนอื่น ๆ ก็จะโกรธและอาจเกิดสงครามแย่งชิงนางขึ้นมาได้ บิดาจึงเรียกอุบลวรรณามาพบแล้วแกล้งถามว่า "ลูกรัก... เจ้าจะสามารถบวชเป็นภิกษุณีได้ไหม?" นางอุบลวรรณาผู้มีบุญญาธิการเก่าซ่อนอยู่ ได้ฟังดังนั้นก็ดีใจมากและตอบทันทีว่า "บวชได้เพคะคุณพ่อ" บิดาจึงพานางไปบวชที่สำนักภิกษุณีทันทีเพื่อตัดปัญหา</p>
+
+          <p><strong>[เนื้อเรื่องส่วนที่ 2: ดวงประทีปแห่งปัญญา และการบรรลุธรรมอย่างรวดเร็ว]</strong></p>
+          <p>หลังจากบวชเป็นภิกษุณีได้ไม่นาน วันหนึ่งถึงเวทีจัดแจงโรงอุโบสถ พระอุบลวรรณาได้รับหน้าที่ให้เป็นคนกวาดทำความสะอาดและจุดประทีป (ตะเกียงไฟ) ในโรงอุโบสถ หลังจากจุดไฟให้ความสว่างไสวแล้ว ท่านได้ยืนจ้องมองดู "เปลวไฟ" จากประทีปนั้น แล้วนำมาตั้งเป็นอารมณ์ในการเจริญกรรมฐาน (เตโชกสิณ) ท่านพิจารณาดูความสว่างไสวและการลุกไหม้ของไฟ น้อมเข้ามาสู่จิตใจว่ากิเลสทั้งหลายก็ถูกเผาผลาญด้วยไฟคือปัญญาได้เช่นกัน จิตของท่านตั้งมั่นเป็นสมาธิอย่างรวดเร็ว และในขณะที่กำลังพิจารณาอยู่นั้นเอง ท่านก็สามารถทำลายอาสวกิเลสทั้งปวง บรรลุเป็น "พระอรหันต์ภิกษุณี" พร้อมด้วยปฏิสัมภิทาและอภิญญา 6 มีฤทธิ์เดชแกล้วกล้าสามารถแสดงปาฏิหาริย์ได้นานัปการ</p>
+
+          <p><strong>[เนื้อเรื่องส่วนที่ 3: อดีตชาติของหญิงผู้ถวายดอกบัวเขียว]</strong></p>
+          <p>พระภิกษุทั้งหลายต่างพากันอัศจรรย์ใจในสีผิวอันงดงามและความสำเร็จธรรมอันรวดเร็วของท่าน พระพุทธเจ้าจึงทรงตรัสเล่าอดีตชาติของพระอุบลวรรณาเถรีให้ฟังว่า:</p>
+          <p>ในอดีตชาติหลายแสนกัปก่อน ท่านเคยเกิดเป็นหญิงชาวบ้านธรรมดา วันหนึ่งได้เห็นพระปัจเจกพุทธเจ้าเสด็จมาบิณฑบาต เกิดความเลื่อมใสอย่างแรงกล้า จึงได้นำ "ดอกอุบลสีเขียว 500 ดอก" ที่เก็บมาจากสระน้ำ พร้อมด้วยผ้าสีกาสาวพัสตร์ที่ย้อมด้วยน้ำฝาดสีงดงามมาถวาย และได้ตั้งจิตอธิษฐานว่า "ด้วยอานิสงส์แห่งการถวายดอกอุบลเขียวนี้ ขอให้ข้าพเจ้าเกิดมามีผิวพรรณงดงามดั่งสีของดอกบัวนี้ในทุก ๆ ชาติ และขอให้ได้บรรลุธรรมอันสูงสุด" ด้วยอานิสงส์แห่งทานและแรงอธิษฐานที่ทำไว้ด้วยใจบริสุทธิ์ ส่งผลให้ท่านมีผิวพรรณเป็นเอกลักษณ์และบวชเรียนจนบรรลุอรหันต์ พระพุทธเจ้าจึงทรงแต่งตั้งให้พระอุบลวรรณาเถรีเป็น "เอตทัคคะ" (ผู้เป็นเลิศ) ในด้านผู้มีฤทธิ์มาก คู่กับพระมหาโมคคัลลานะในฝ่ายภิกษุณี</p>
+        </div>
+
+        <!-- Moral Box -->
+        <div class="moral-box">
+          <p class="moral-label">คติธรรมที่ได้รับ</p>
+          <p class="moral-text">"ผู้ใดมีจิตสงบระงับแล้ว ตัดตัณหาได้ขาด ย่อมใช้ชีวิตอยู่อย่างเป็นสุข เปรียบเหมือนดอกบัวที่เกิดในน้ำ แต่ไม่เปียกด้วยน้ำ" ความงดงามทางกายภายนอกอาจนำมาซึ่งความวุ่นวายและภัยอันตรายทางโลก แต่ความงดงามทางจิตใจที่ได้รับการชำระล้างด้วยพระธรรมคำสอน ย่อมเป็นความงามที่แท้จริงและคงทนถาวร นำพาชีวิตข้ามพ้นห้วงทุกข์สู่ความสงบเย็นอันเป็นอมตะได้ในที่สุด</p>
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div style="display: flex; justify-content: space-between; align-items: center; margin: 3rem 0; gap: 1rem;">
+        <a href="story-014.html" class="btn" style="border: 1px solid var(--border); padding: 0.75rem 1.5rem; border-radius: 50px; color: var(--text-primary); text-align: center;">
+          ← เรื่องก่อนหน้า
+        </a>
+
+        <a href="../index.html" class="btn btn-primary" style="text-align: center;">กลับหน้าหลัก</a>
+
+        <a href="story-016.html" class="btn" style="border: 1px solid var(--border); padding: 0.75rem 1.5rem; border-radius: 50px; color: var(--text-primary); text-align: center;">
+          เรื่องถัดไป →
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="../script.js"></script>
+</body>
+</html>

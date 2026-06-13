@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="นิทานธรรมบท — คลังนิทานธรรมบทดิจิทัล">
+  <title>นิทานธรรมบท — ห้องสมุดดิจิทัลแห่งสัจธรรม</title>
+  <link rel="icon" href="./รูป/img11.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<video id="bg-video" autoplay muted loop playsinline>
+  <source src="video/video1.mp4" type="video/mp4">
+</video>
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <!-- Logo: ซ้ายสุด -->
+      <a href="index.html" class="nav-logo">
+        <img src="./รูป/img11.png" alt="นิทานธรรมบท" width="36" height="36">
+        <span>นิทานธรรมบท</span>
+      </a>
+
+      <!-- Right Group: Search | Menu | Theme Switcher -->
+      <div class="nav-actions">
+        <div class="nav-search">
+          <input type="text" id="searchInput" placeholder="ค้นหา..." aria-label="ค้นหานิทาน">
+          <button onclick="searchStories()" aria-label="ค้นหา">🔍</button>
+        </div>
+
+        <nav class="nav-menu" id="nav-links">
+          <a href="index.html" class="active">หน้าแรก</a>
+          <a href="stories.html">นิทานทั้งหมด</a>
+          <a href="stories1.html">วิดิโอนิทาน</a>
+          <a href="about.html">เกี่ยวกับเรา</a>
+          <a href="login.html">เข้าสู่ระบบ</a>
+        </nav>
+
+        <button class="theme-toggle" onclick="toggleTheme()" id="themeToggle" aria-label="เปลี่ยนธีม">
+          <span id="themeIcon">☀️</span>
+        </button>
+
+        <button class="mobile-toggle" onclick="toggleMobileMenu()" id="mobileMenuBtn" aria-label="เมนู">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge">Digital Dhamma Library</span>
+        <h1 class="hero-title">คลังนิทานธรรมบท</h1>
+        <p class="hero-desc">
+          รวบรวมบทเรียนชีวิตและสัจธรรมจากพระคัมภีร์ธรรมบทอรรถกถา<br>
+          เพื่อการตื่นรู้และนำทางจิตใจสู่ความสงบ
+        </p>
+        <a href="#featured" class="btn btn-primary">เริ่มอ่านนิทาน</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTENT ===== -->
+  <main class="container">
+
+    <!-- Daily Quote -->
+    <section class="quote-section">
+      <div class="quote-card">
+        <span class="quote-label">☸ คติธรรมประจำวัน</span>
+        <blockquote id="dailyQuote">"จิตที่ฝึกดีแล้ว ย่อมนำสุขมาให้"</blockquote>
+        <cite id="quoteSource">— พระธรรมบท</cite>
+      </div>
+    </section>
+
+
+    <!-- Featured Stories -->
+    <section class="stories-section" id="featured">
+      <div class="section-header">
+        <h2 class="section-title">นิทานแนะนำ</h2>
+        <p class="section-desc">เรื่องราวคัดสรรที่มอบข้อคิดอันทรงพลัง</p>
+      </div>
+      <div class="stories-grid" id="featuredGrid"></div>
+    </section>
+
+    <!-- Latest Stories -->
+    <section class="stories-section" id="latest">
+      <div class="section-header">
+        <h2 class="section-title" id="latestTitle">นิทานล่าสุด</h2>
+        <p class="section-desc" id="latestDesc">นิทานธรรมบททั้งหมดในคลัง</p>
+      </div>
+      <div class="stories-grid" id="latestGrid"></div>
+    </section>
+
+  </main>
+
+    <!-- Categories -->
+    <section class="categories-section">
+      <div class="section-header">
+        <h2 class="section-title">หมวดหมู่ธรรมะ</h2>
+        <p class="section-desc">ค้นหานิทานตามหัวข้อที่ท่านสนใจ</p>
+      </div>
+      <div class="categories-grid">
+        <button class="category-card" onclick="filterByCategory('karma')">
+          <span class="cat-name">กฎแห่งกรรม</span>
+        </button>
+        <button class="category-card" onclick="filterByCategory('wisdom')">
+          <span class="cat-name">ปัญญา</span>
+        </button>
+        <button class="category-card" onclick="filterByCategory('gratitude')">
+          <span class="cat-name">กตัญญู</span>
+        </button>
+        <button class="category-card" onclick="filterByCategory('compassion')">
+          <span class="cat-name">เมตตา</span>
+        </button>
+        <button class="category-card" onclick="filterByCategory('mindfulness')">
+          <span class="cat-name">สติ</span>
+        </button>
+        <button class="category-card" onclick="filterByCategory('effort')">
+          <span class="cat-name">ความเพียร</span>
+        </button>
+      </div>
+    </section>
+
+  <!-- ===== FOOTER ===== -->
+  <div id="footer-placeholder"></div>
+
+  <!-- ===== MODAL ===== -->
+  <div class="modal-overlay" id="storyModal" onclick="closeModal(event)">
+    <div class="modal">
+      <div class="modal-header">
+        <span class="modal-icon" id="modalIcon"></span>
+        <span class="modal-num" id="modalNum"></span>
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <p class="modal-lesson" id="modalLesson"></p>
+        <button class="modal-close" onclick="closeModalDirect()" aria-label="ปิด">✕</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

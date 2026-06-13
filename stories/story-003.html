@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[ชื่อเรื่อง] — นิทานธรรมบท</title>
+  <link rel="icon" href="../รูป/img11.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-logo">
+        <img src="../รูป/img11.png" alt="นิทานธรรมบท" width="36" height="36">
+        <span>นิทานธรรมบท</span>
+      </a>
+
+      <div class="nav-actions">
+        <div class="nav-search">
+          <input type="text" id="searchInput" placeholder="ค้นหา..." aria-label="ค้นหานิทาน">
+          <button onclick="searchStories()" aria-label="ค้นหา">🔍</button>
+        </div>
+
+        <nav class="nav-menu" id="nav-links">
+          <a href="../index.html">หน้าแรก</a>
+          <a href="../stories.html">นิทานทั้งหมด</a>
+          <a href="stories1.html">วิดิโอนิทาน</a>
+          <a href="../about.html">เกี่ยวกับเรา</a>
+          <a href="../login.html">เข้าสู่ระบบ</a>
+        </nav>
+
+        <button class="theme-toggle" onclick="toggleTheme()" id="themeToggle" aria-label="เปลี่ยนธีม">
+          <span id="themeIcon">☀️</span>
+        </button>
+
+        <button class="mobile-toggle" onclick="toggleMobileMenu()" id="mobileMenuBtn" aria-label="เมนู">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge">นิทานธรรมบท</span>
+        <h1 class="hero-title">พระติสสเถระ</h1>
+        <p class="hero-desc">
+          "เมื่อ 'อัตตา' และ 'ความถือตัว' ว่าเป็นญาติสนิทของศาสดา ทำให้หลวงตาแก่วางโตอวดเบ่งกลางโรงฉัน ทว่าพอโดน
+          ตักเตือนกลับร้องไห้โฮไม่ยอมอโหสิกรรม สู่บทเรียนเหนือกาลเวลาจากอดีตชาติของ 'ดาบสหัวหมอ' ที่แกล้งนอน
+          ขวางประตูจนเกือบหัวแตกเป็น 7 เสี่ยง เพียงเพราะความผูกใจเจ็บ"
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STORY CONTENT ===== -->
+  <main class="container">
+    <div class="stories-section" style="max-width: 800px; margin: 0 auto;">
+
+      <!-- Image Placeholder -->
+      <div class="story-banner" style="text-align: center; margin-bottom: 3rem;">
+        <img src="../รูป/story-003.png" alt="รูปประกอบนิทาน" style="width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border);">
+      </div>
+
+      <!-- Story Text -->
+      <div class="modal-body" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2.5rem;">
+        <div class="story-text">
+          <p>ในวัดพระเชตวัน มีพระภิกษุแก่องค์หนึ่งชื่อว่า "พระติสสะ" ท่านเข้ามาบวชในพระพุทธศาสนาเมื่อตอนอายุมากแล้ว
+            แต่ทว่าท่านมีอภิสิทธิ์เหนือพระรูปอื่น ๆ เพราะท่านเป็น "โอรสของพระมาตุฉา" หรือมีศักดิ์เป็นลูกพี่ลูกน้อง (ญาติ
+            สนิท) ของพระพุทธเจ้า ด้วยเหตุนี้ ท่านจึงได้รับความสะดวกสบาย ได้ฉันภัตตาหารดี ๆ มีจีวรสวย ๆ จนร่างกายอ้วน
+            ท้วน สมบูรณ์ และมีผิวพรรณผุดผ่อง พฤติกรรมติดตัวของหลวงตาติสสะคือ ท่านชอบแต่งกายด้วยจีวรที่รีดเรียบ
+            กริบ นั่งวางท่าทางน่าเกรงขามอยู่ตรงกลางโรงฉันเพื่อรอให้พระภิกษุรูปอื่น ๆ ที่เดินเข้ามาแสดงความเคารพกราบ
+            ไหว้ โดยที่ตัวท่านเองไม่ได้มีคุณวิเศษ พรรษาก็ไม่มี และไม่เคยช่วยงานข้อวัตรใด ๆ ในวัดเลย
+          </p>
+          <p>วันหนึ่ง มีพระภิกษุอาคันตุกะกลุ่มหนึ่งเดินทางมาไกลเพื่อเข้าเฝ้าพระพุทธเจ้า เมื่อเดินเข้ามาในโรงฉัน เห็นหลวงตาติ
+            สสะนั่งอ้วนท้วน ผิวพรรณดี ดูน่าเลื่อมใส ก็นึกว่าเป็นพระมหาเถระผู้ใหญ่ จึงพากันเข้าไปกราบไหว้ นั่งใกล้ ๆ และ
+            ช่วยนวดมือขยำเท้าให้ตามธรรมเนียม หลังจากนวดไปได้สักพัก พระหนุ่มรูปหนึ่งจึงเอ่ยถามว่า "หลวงพ่อบวชมาได้กี่
+            พรรษาแล้วครับ?" พระติสสะตอบหน้านิ่งว่า "อ๋อ...ฉันยังไม่มีพรรษาหรอก เพิ่งบวชตอนแก่นี่เอง" พระหนุ่มได้ฟังก็
+            สะดุ้ง ชักมือกลับและตักเตือนทันทีว่า "อ้าวหลวงตา! บวชใหม่พรรษาก็ไม่มี แต่ทำไมมานั่งหัวสูง ให้พระเถระผู้ใหญ่ที่
+            เดินทางมาเหนื่อย ๆ นวดให้อยู่ได้ ไม่รู้จักที่ต่ำที่สูงเลยหรือ!" พระติสสะโกรธจัดขู่กลับว่าจะฟ้องพระพุทธเจ้าให้ล้าง
+            โคตรให้หมด แล้ววิ่งร้องไห้โฮไปกุฏิพระพุทธเจ้า ทว่าเมื่อพระพุทธเจ้าทรงพิจารณาเรื่องราวและสั่งให้พระติสสะ
+            กราบขอโทษพระอาคันตุกะถึง 3 ครั้ง หลวงตาแกก็ยังดื้อแพ่ง เม้มปากแน่นแล้วตอบว่า "ข้าพระองค์ไม่ขอโทษเด็ด
+            ขาด พวกมันด่าข้าพระองค์ก่อน"
+          </p>
+          <p>พระพุทธเจ้าจึงตรัสว่า "ภิกษุทั้งหลาย ติสสะไม่ได้เพิ่งดื้อและเจ้าคิดเจ้าแค้นแค่ชาตินี้หรอก ชาติก่อนเธอก็เคยทำ
+            เมืองมืดมิดเพราะความผูกใจเจ็บมาแล้ว" แล้วทรงเล่าอดีตชาติให้ฟังว่า:
+            ในอดีตกาล มี "เทวลดาบส" (อดีตชาติของพระติสสะ) และ "นารทดาบส" (อดีตชาติของพระพุทธเจ้า) ได้ขอพักค้าง
+            คืนที่โรงงานของช่างหม้อ นารทะจำตำแหน่งที่นอนของเทวละไว้อย่างดีเพื่อป้องกันการเดินเหยียบ แต่พอตกดึก เทว
+            ละดันนอนเปลี่ยนท่า เอาตัวมานอนขวางตรงประตู นารทะจะออกไปข้างนอกจึงเดินไปเหยียบเข้าที่ "ชฎา (มวยผม)"
+            ของเทวละเข้าอย่างจัง นารทะรีบขอโทษขอโพยแล้วเดินออกไป แต่เทวละผู้เจ้าคิดเจ้าแค้นคิดว่าขากลับนารทะต้อง
+            เดินมาเหยียบอีกแน่ ๆ แกเลยแกล้งเปลี่ยนท่านอนอีกรอบ โดยสลับเอา "หัว" ไปนอนไว้ตรงตำแหน่งที่เป็น "เท้า" ใน
+            ตอนแรก! พอขากลับ นารทะคิดเลี่ยงไปทางปลายเท้า... ปรากฏว่าเลยเหยียบเข้าที่ "คอ" ของเทวละเต็ม ๆ ! เทวละ
+            โกรธจัดไม่ฟังคำอธิบาย แช่งนารทะว่า "พรุ่งนี้เช้าขอให้หัวของแกแตกออกเป็น 7 เสี่ยง!" นารทะรู้ด้วยญาณว่าคำแช่ง
+            จะย้อนเข้าตัวเทวละเองด้วยความสงสารจึงใช้ฤทธิ์ "กักขังพระอาทิตย์ไว้ไม่ให้ขึ้น" จนเดือดร้อนพระราชาต้องมาจับ
+            เทวละกดหัวกราบขอโทษนารทะเพื่อยอมปล่อยพระอาทิตย์ รอดตายมาได้อย่างหวุดหวิด พระพุทธเจ้าทรงสรุปว่า
+            การผูกใจเจ็บมีแต่จะสร้างทุกข์ไม่สิ้นสุด
+          </p>
+        </div>
+
+        <!-- Moral Box -->
+        <div class="moral-box">
+          <p class="moral-label">คติธรรมที่ได้รับ</p>
+          <p class="moral-text">
+            "เวรย่อมไม่ระงับด้วยการจองเวร" บุคคลใดที่มัวแต่คิดผูกใจเจ็บว่า 'คนนั้นด่าเรา คนนั้นทำร้ายเรา คนนั้นเอาชนะเรา'
+            เวรของเขาย่อมไม่มีวันระงับสิ้น แต่ผู้ใดที่ไม่ผูกใจเจ็บ ไม่ถือมั่นในอัตตาตัวตน ละความโกรธได้ เวรทั้งหลายย่อม
+            ระงับดับลงทันที
+          </p>
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div style="display: flex; justify-content: space-between; align-items: center; margin: 3rem 0; gap: 1rem;">
+        <a href="story-002.html" class="btn" style="border: 1px solid var(--border); padding: 0.75rem 1.5rem; border-radius: 50px; color: var(--text-primary); text-align: center;">
+          ← เรื่องก่อนหน้า
+        </a>
+
+        <a href="../index.html" class="btn btn-primary" style="text-align: center;">กลับหน้าหลัก</a>
+
+        <a href="story-004.html" class="btn" style="border: 1px solid var(--border); padding: 0.75rem 1.5rem; border-radius: 50px; color: var(--text-primary); text-align: center;">
+          เรื่องถัดไป →
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="../script.js"></script>
+</body>
+</html>

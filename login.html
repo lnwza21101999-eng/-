@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="นิทานธรรมบท — คลังนิทานธรรมบทดิจิทัล">
+  <title>นิทานธรรมบท — ห้องสมุดดิจิทัลแห่งสัจธรรม</title>
+  <link rel="icon" href="./รูป/img11.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<video id="bg-video" autoplay muted loop playsinline>
+  <source src="video/video1.mp4" type="video/mp4">
+</video>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <!-- Logo: ซ้ายสุด -->
+      <a href="index.html" class="nav-logo">
+        <img src="./รูป/img11.png" alt="นิทานธรรมบท" width="36" height="36">
+        <span>นิทานธรรมบท</span>
+      </a>
+
+      <!-- Right Group: Search | Menu | Theme Switcher -->
+      <div class="nav-actions">
+        <div class="nav-search">
+          <input type="text" id="searchInput" placeholder="ค้นหา..." aria-label="ค้นหานิทาน">
+          <button onclick="searchStories()" aria-label="ค้นหา">🔍</button>
+        </div>
+
+        <nav class="nav-menu" id="nav-links">
+          <a href="index.html">หน้าแรก</a>
+          <a href="stories.html">นิทานทั้งหมด</a>
+          <a href="stories1.html">วิดิโอนิทาน</a>
+          <a href="about.html">เกี่ยวกับเรา</a>
+          <a href="login.html" class="active">เข้าสู่ระบบ</a>
+        </nav>
+
+        <button class="theme-toggle" onclick="toggleTheme()" id="themeToggle" aria-label="เปลี่ยนธีม">
+          <span id="themeIcon">☀️</span>
+        </button>
+
+        <button class="mobile-toggle" onclick="toggleMobileMenu()" id="mobileMenuBtn" aria-label="เมนู">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== LOGIN FORM ===== -->
+  <main class="auth-wrapper">
+    <div class="auth-card">
+      <div class="auth-header">
+        <span class="auth-icon">☸</span>
+        <h1>ยินดีต้อนรับ</h1>
+        <p>เข้าสู่ระบบเพื่อบันทึกนิทานที่คุณชื่นชอบ</p>
+      </div>
+
+      <form class="auth-form" onsubmit="handleLogin(event)">
+        <div class="form-group">
+          <label for="email">อีเมล</label>
+          <input type="email" id="email" placeholder="example@mail.com" required autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label for="password">รหัสผ่าน</label>
+          <input type="password" id="password" placeholder="••••••••" required autocomplete="current-password">
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">เข้าสู่ระบบ</button>
+      </form>
+
+      <div class="auth-footer">
+        <a href="#" class="forgot-link">ลืมรหัสผ่าน?</a>
+        <span class="divider">|</span>
+        <a href="#" class="register-link">สมัครสมาชิก</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <div id="footer-placeholder"></div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>เรื่อง พระกุมารกัสสปะเถระ — นิทานธรรมบท</title>
+  <link rel="icon" href="../รูป/img11.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-logo">
+        <img src="../รูป/img11.png" alt="นิทานธรรมบท" width="36" height="36">
+        <span>นิทานธรรมบท</span>
+      </a>
+
+      <div class="nav-actions">
+        <div class="nav-search">
+          <input type="text" id="searchInput" placeholder="ค้นหา..." aria-label="ค้นหานิทาน">
+          <button onclick="searchStories()" aria-label="ค้นหา">🔍</button>
+        </div>
+
+        <nav class="nav-menu" id="nav-links">
+          <a href="../index.html">หน้าแรก</a>
+          <a href="../stories.html">นิทานทั้งหมด</a>
+          <a href="stories1.html">วิดิโอนิทาน</a>
+          <a href="../about.html">เกี่ยวกับเรา</a>
+          <a href="../login.html">เข้าสู่ระบบ</a>
+        </nav>
+
+        <button class="theme-toggle" onclick="toggleTheme()" id="themeToggle" aria-label="เปลี่ยนธีม">
+          <span id="themeIcon">☀️</span>
+        </button>
+
+        <button class="mobile-toggle" onclick="toggleMobileMenu()" id="mobileMenuBtn" aria-label="เมนู">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge">นิทานธรรมบท</span>
+        <h1 class="hero-title">เรื่อง พระกุมารกัสสปะเถระ</h1>
+        <p class="hero-desc">"เมื่อคำครหาเรื่อง 'สายเลือดอื้อฉาว' กลายเป็นพลังผลักดันสู่ยอดปัญญา! เรื่องราวของกุมารกัสสปะ เด็กน้อยผู้ถูกมองด้วยสายตาเคลือบแคลงเพราะแม่บวชทั้งที่ตั้งครรภ์ แต่ด้วยความเพียรและธรรมะที่ฝังลึก ทำให้ท่านเติบโตมาเป็นพระนักเทศน์ผู้ไขปริศนาธรรมอันซับซ้อนให้ชาวเมืองและพระราชาตาสว่างได้อย่างอัศจรรย์"</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STORY CONTENT ===== -->
+  <main class="container">
+    <div class="stories-section" style="max-width: 800px; margin: 0 auto;">
+
+      <!-- Image Placeholder -->
+      <div class="story-banner" style="text-align: center; margin-bottom: 3rem;">
+        <img src="../รูป/story-020.png" alt="รูปประกอบนิทาน" style="width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border);">
+      </div>
+
+      <!-- Story Text -->
+      <div class="modal-body" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2.5rem;">
+        <div class="story-text">
+          <p><strong>[เนื้อเรื่องส่วนที่ 1: กำเนิดท่ามกลางมรสุม และการอุปการะจากพระราชา]</strong></p>
+          <p>เรื่องราวของท่านกุมารกัสสปะเริ่มจาก "นางวิสาขา" (ปริพาชิกาคนหนึ่ง ไม่ใช่พระนางวิสาขามหาอุบาสิกา) ผู้ที่มีศรัทธาบวชเป็นภิกษุณีโดยไม่ทราบว่าตนเองกำลังตั้งครรภ์อยู่ เมื่อคนในสังคมเห็นนางท้องก็พากันนินทาและหาว่านางประพฤติผิดศีลทำศาสนาเสื่อมเสีย นางจึงต้องไปเข้าเฝ้า "พระนางปชาบดีโคตมี" และพระพุทธองค์เพื่อพิสูจน์ความบริสุทธิ์จนเรื่องคลี่คลาย เมื่อคลอดบุตรชายออกมา "พระเจ้าปเสนทิโกศล" ทรงมีความเมตตาและต้องการอุปถัมภ์เด็กน้อยผู้นี้ จึงทรงรับไปเลี้ยงดูไว้ในวังและให้ชื่อว่า "กุมารกัสสปะ" เด็กน้อยจึงเติบโตมาท่ามกลางความรักของพระราชา แต่กุมารกัสสปะกลับมีความใฝ่ฝันเดียวคือการได้บวชในพระพุทธศาสนา</p>
+
+          <p><strong>[เนื้อเรื่องส่วนที่ 2: วัยรุ่นผู้ใฝ่ธรรม และการเทศน์ที่โลกต้องตะลึง]</strong></p>
+          <p>เมื่อกุมารกัสสปะอายุครบวัยบวช ท่านจึงทูลขออนุญาตพระเจ้าปเสนทิโกศลออกบวช หลังจากบวชแล้วท่านมีความสามารถพิเศษในการอธิบายธรรมะที่ยาก ๆ ให้เข้าใจง่าย เมื่อท่านได้เทศนาสั่งสอนธรรมแก่ประชาชน หรือแม้แต่การถวายธรรมะแด่พระราชา ท่านมักจะเปรียบเทียบธรรมะกับสิ่งรอบตัว เช่น การเปรียบ "ร่างกายนี้กับจอมปลวก" (ที่มีรู 6 รู เปรียบเหมือนทวารทั้ง 6 ที่คอยรับสิ่งเร้าต่าง ๆ เข้ามา) ทำให้ผู้ฟังเกิดความเข้าใจอย่างถ่องแท้และเห็นภาพความจริงของชีวิตได้อย่างรวดเร็ว</p>
+
+          <p><strong>[เนื้อเรื่องส่วนที่ 3: การไขปริศนาธรรมให้พระราชา]</strong></p>
+          <p>ครั้งหนึ่ง พระเจ้าปเสนทิโกศลทรงมีพระราชปุจฉาเกี่ยวกับเรื่องปริศนาธรรมที่ลึกซึ้ง พระกุมารกัสสปะจึงได้ถวายพระธรรมเทศนาเรื่อง "จอมปลวก" เพื่ออธิบายถึงอุปมาของชีวิตและจิตใจ พระราชาทรงเลื่อมใสมากและประทานรางวัลเป็นเสื้อผ้าเนื้อดี แต่พระกุมารกัสสปะกลับนำไปถวายต่อให้แก่พระอุปัชฌาย์ของท่านเพื่อแสดงความกตัญญู ความเฉลียวฉลาดในการจำแนกธรรมและการรู้จักกาลเทศะของท่าน ทำให้ท่านกลายเป็นที่เคารพรักของทั้งพระสงฆ์และฆราวาส พระพุทธเจ้าจึงทรงยกย่องท่านให้เป็นเลิศ in ด้านการจำแนกธรรม</p>
+        </div>
+
+        <!-- Moral Box -->
+        <div class="moral-box">
+          <p class="moral-label">คติธรรมที่ได้รับ</p>
+          <p class="moral-text">"ปัญญาเปรียบเสมือนประทีปที่ส่องทางให้ชีวิต" ต้นกำเนิดของคนเราอาจมีอุปสรรคหรือคำครหาที่หลีกเลี่ยงไม่ได้ แต่สิ่งเหล่านั้นไม่อาจขวางกั้นความเจริญรุ่งเรืองของจิตใจและปัญญาได้ หากบุคคลนั้นมีความมุ่งมั่นที่จะพัฒนาตนเองและสั่งสมความดีอย่างสม่ำเสมอ ความเก่งกล้าในธรรมย่อมทำให้เขากลายเป็นที่พึ่งพาและแสงสว่างแก่ผู้อื่นได้ในที่สุด</p>
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div style="display: flex; justify-content: space-between; align-items: center; margin: 3rem 0; gap: 1rem;">
+        <a href="story-019.html" class="btn" style="border: 1px solid var(--border); padding: 0.75rem 1.5rem; border-radius: 50px; color: var(--text-primary); text-align: center;">
+          ← เรื่องก่อนหน้า
+        </a>
+
+        <a href="../index.html" class="btn btn-primary" style="text-align: center;">กลับหน้าหลัก</a>
+
+        <div style="width: 150px;"></div> <!-- Placeholder to keep layout balanced without a next button -->
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="../script.js"></script>
+</body>
+</html>

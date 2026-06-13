@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="นิทานธรรมบท — คลังนิทานธรรมบทดิจิทัล">
+  <title>นิทานธรรมบท — ห้องสมุดดิจิทัลแห่งสัจธรรม</title>
+  <link rel="icon" href="./รูป/img11.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<video id="bg-video" autoplay muted loop playsinline>
+  <source src="video/video1.mp4" type="video/mp4">
+</video>
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <!-- Logo: ซ้ายสุด -->
+      <a href="index.html" class="nav-logo">
+        <img src="./รูป/img11.png" alt="นิทานธรรมบท" width="36" height="36">
+        <span>นิทานธรรมบท</span>
+      </a>
+
+      <!-- Right Group: Search | Menu | Theme Switcher -->
+      <div class="nav-actions">
+        <div class="nav-search">
+          <input type="text" id="searchInput" placeholder="ค้นหา..." aria-label="ค้นหานิทาน">
+          <button onclick="searchStories()" aria-label="ค้นหา">🔍</button>
+        </div>
+
+        <nav class="nav-menu" id="nav-links">
+          <a href="index.html" >หน้าแรก</a>
+          <a href="stories.html">นิทานทั้งหมด</a>
+          <a href="stories1.html" class="active">วิดิโอนิทาน</a>
+          <a href="about.html">เกี่ยวกับเรา</a>
+          <a href="login.html">เข้าสู่ระบบ</a>
+        </nav>
+
+        <button class="theme-toggle" onclick="toggleTheme()" id="themeToggle" aria-label="เปลี่ยนธีม">
+          <span id="themeIcon">☀️</span>
+        </button>
+
+        <button class="mobile-toggle" onclick="toggleMobileMenu()" id="mobileMenuBtn" aria-label="เมนู">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+<!-- ===== HERO SECTION ===== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <span class="hero-badge">Video Library</span>
+      <h1 class="hero-title">วิดิโอนิทานธรรมบท</h1>
+      <p class="hero-desc">รับชมวิดิโอนิทานธรรมบท เรื่องราวคติธรรมเพื่อการตื่นรู้และนำทางจิตใจสู่ความสงบ</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTENT ===== -->
+<main class="container">
+  <div class="stories-section">
+    <div class="section-header">
+      <h2 class="section-title">วิดิโอนิทานทั้งหมด</h2>
+      <p class="section-desc">เลือกรับชมวิดิโอนิทานธรรมบทที่คุณสนใจ</p>
+    </div>
+    <div class="stories-grid" id="videoGrid">
+
+      <!-- Video 1 -->
+      <div class="video-card" onclick="openVideoModal('video/story-001.mp4', 'พระจักขุบาลเถระ', 'ผลของกรรม — การทำดีและชั่วย่อมได้รับผลตอบสนอง')">
+        <div class="video-thumbnail">
+          <img src="รูป/story-001.png" alt="พระจักขุบาลเถระ">
+          <div class="play-overlay">
+            <div class="play-icon">▶</div>
+          </div>
+          <span class="video-duration">5:30</span>
+        </div>
+        <div class="video-info">
+          <h3 class="video-title">พระจักขุบาลเถระ</h3>
+          <p class="video-lesson">"ใจเป็นประธานในสิ่งทั้งปวง"</p>
+          <div class="video-meta">
+            <span class="video-views">👁️ 1.2K</span>
+            <span class="video-date">📅 2 วันที่แล้ว</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 2 -->
+      <div class="video-card" onclick="openVideoModal('video/story-002.mp4', 'มัฏฐกุณฑลีมาณพ', 'ความเลื่อมใสในพระพุทธเจ้าแม้เพียงใจ ก็ยังให้ผลดี')">
+        <div class="video-thumbnail">
+          <img src="รูป/story-002.png" alt="มัฏฐกุณฑลีมาณพ">
+          <div class="play-overlay">
+            <div class="play-icon">▶</div>
+          </div>
+          <span class="video-duration">4:45</span>
+        </div>
+        <div class="video-info">
+          <h3 class="video-title">มัฏฐกุณฑลีมาณพ</h3>
+          <p class="video-lesson">"ใจเป็นประธานในสิ่งทั้งปวง"</p>
+          <div class="video-meta">
+            <span class="video-views">👁️ 856</span>
+            <span class="video-date">📅 5 วันที่แล้ว</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 3 -->
+      <div class="video-card" onclick="openVideoModal('video/story-003.mp4', 'พระติสสเถระ', 'เวรย่อมไม่ระงับด้วยการจองเวร')">
+        <div class="video-thumbnail">
+          <img src="รูป/story-003.png" alt="พระติสสเถระ">
+          <div class="play-overlay">
+            <div class="play-icon">▶</div>
+          </div>
+          <span class="video-duration">6:12</span>
+        </div>
+        <div class="video-info">
+          <h3 class="video-title">พระติสสเถระ</h3>
+          <p class="video-lesson">"เวรย่อมไม่ระงับด้วยการจองเวร"</p>
+          <div class="video-meta">
+            <span class="video-views">👁️ 2.1K</span>
+            <span class="video-date">📅 1 สัปดาห์ที่แล้ว</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 4 -->
+      <div class="video-card" onclick="openVideoModal('video/story-004.mp4', 'นางกาลียักษิณี', 'เวรย่อมไม่ระงับด้วยการจองเวร แต่ระงับได้ด้วยการไม่จองเวร')">
+        <div class="video-thumbnail">
+          <img src="รูป/story-004.png" alt="นางกาลียักษิณี">
+          <div class="play-overlay">
+            <div class="play-icon">▶</div>
+          </div>
+          <span class="video-duration">7:20</span>
+        </div>
+        <div class="video-info">
+          <h3 class="video-title">นางกาลียักษิณี</h3>
+          <p class="video-lesson">"เวรย่อมไม่ระงับด้วยการจองเวร"</p>
+          <div class="video-meta">
+            <span class="video-views">👁️ 945</span>
+            <span class="video-date">📅 2 สัปดาห์ที่แล้ว</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 5 -->
+      <div class="video-card" onclick="openVideoModal('video/story-005.mp4', 'พระนันทเถระ', 'จิตที่ฝึกมาไม่ดี ย่อมถูกราคะและความทุกข์ครอบงำได้ง่าย')">
+        <div class="video-thumbnail">
+          <img src="รูป/story-005.png" alt="พระนันทเถระ">
+          <div class="play-overlay">
+            <div class="play-icon">▶</div>
+          </div>
+          <span class="video-duration">5:55</span>
+        </div>
+        <div class="video-info">
+          <h3 class="video-title">พระนันทเถระ</h3>
+          <p class="video-lesson">"จิตที่ฝึกมาไม่ดี ย่อมถูกราคะครอบงำ"</p>
+          <div class="video-meta">
+            <span class="video-views">👁️ 1.5K</span>
+            <span class="video-date">📅 3 สัปดาห์ที่แล้ว</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 6 -->
+      <div class="video-card" onclick="openVideoModal('video/story-006.mp4', 'ปัณฑิตสามเณร', 'การฝึกฝนจิตใจเหมือนช่างศรดัดลูกศรให้ตรง')">
+        <div class="video-thumbnail">
+          <img src="รูป/story-006.png" alt="ปัณฑิตสามเณร">
+          <div class="play-overlay">
+            <div class="play-icon">▶</div>
+          </div>
+          <span class="video-duration">8:10</span>
+        </div>
+        <div class="video-info">
+          <h3 class="video-title">ปัณฑิตสามเณร</h3>
+          <p class="video-lesson">"จิตที่ได้รับการแผ้วถางย่อมเข้าถึงสัจธรรม"</p>
+          <div class="video-meta">
+            <span class="video-views">👁️ 3.2K</span>
+            <span class="video-date">📅 1 เดือนที่แล้ว</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 7 -->
+      <div class="video-card" onclick="openVideoModal('video/story-007.mp4', 'พระมหากาลเถระ', 'มารย่อมพ่ายแพ้ผู้ที่ไม่สำรวมในอินทรีย์')">
+        <div class="video-thumbnail">
+          <img src="รูป/story-007.png" alt="พระมหากาลเถระ">
+          <div class="play-overlay">
+            <div class="play-icon">▶</div>
+          </div>
+          <span class="video-duration">6:45</span>
+        </div>
+        <div class="video-info">
+          <h3 class="video-title">พระมหากาลเถระ</h3>
+          <p class="video-lesson">"มารย่อมพ่ายแพ้ผู้ไม่สำรวมในอินทรีย์"</p>
+          <div class="video-meta">
+            <span class="video-views">👁️ 1.8K</span>
+            <span class="video-date">📅 1 เดือนที่แล้ว</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 8 -->
+      <div class="video-card" onclick="openVideoModal('video/story-008.mp4', 'พระเทวทัต', 'ผู้ทำกรรมชั่วย่อมเดือดร้อนในโลกทั้งสอง')">
+        <div class="video-thumbnail">
+          <img src="รูป/story-008.png" alt="พระเทวทัต">
+          <div class="play-overlay">
+            <div class="play-icon">▶</div>
+          </div>
+          <span class="video-duration">9:30</span>
+        </div>
+        <div class="video-info">
+          <h3 class="video-title">พระเทวทัต</h3>
+          <p class="video-lesson">"ผู้ทำกรรมชั่วย่อมเดือดร้อนในโลกทั้งสอง"</p>
+          <div class="video-meta">
+            <span class="video-views">👁️ 4.5K</span>
+            <span class="video-date">📅 2 เดือนที่แล้ว</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 9 -->
+      <div class="video-card" onclick="openVideoModal('video/story-009.mp4', 'นางจิญจมาณวิกา', 'การพูดเท็จโดยไม่มีความละอาย')">
+        <div class="video-thumbnail">
+          <img src="รูป/story-009.png" alt="นางจิญจมาณวิกา">
+          <div class="play-overlay">
+            <div class="play-icon">▶</div>
+          </div>
+          <span class="video-duration">7:15</span>
+        </div>
+        <div class="video-info">
+          <h3 class="video-title">นางจิญจมาณวิกา</h3>
+          <p class="video-lesson">"การพูดเท็จโดยไม่มีความละอาย"</p>
+          <div class="video-meta">
+            <span class="video-views">👁️ 1.1K</span>
+            <span class="video-date">📅 2 เดือนที่แล้ว</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 10 -->
+      <div class="video-card" onclick="openVideoModal('video/story-010.mp4', 'นายจุนทสูกริก', 'ผู้ทำกรรมชั่วย่อมเดือดร้อนใจในโลกทั้งสอง')">
+        <div class="video-thumbnail">
+          <img src="รูป/story-010.png" alt="นายจุนทสูกริก">
+          <div class="play-overlay">
+            <div class="play-icon">▶</div>
+          </div>
+          <span class="video-duration">5:40</span>
+        </div>
+        <div class="video-info">
+          <h3 class="video-title">นายจุนทสูกริก</h3>
+          <p class="video-lesson">"ผู้ทำกรรมชั่วย่อมเดือดร้อนใจ"</p>
+          <div class="video-meta">
+            <span class="video-views">👁️ 987</span>
+            <span class="video-date">📅 3 เดือนที่แล้ว</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 11 -->
+      <div class="video-card" onclick="openVideoModal('video/story-011.mp4', 'ธัมมิกอุบาสก', 'ผู้ทำกรรมดีย่อมเพลิดเพลินใจในโลกทั้งสอง')">
+        <div class="video-thumbnail">
+          <img src="รูป/story-011.png" alt="ธัมมิกอุบาสก">
+          <div class="play-overlay">
+            <div class="play-icon">▶</div>
+          </div>
+          <span class="video-duration">6:20</span>
+        </div>
+        <div class="video-info">
+          <h3 class="video-title">ธัมมิกอุบาสก</h3>
+          <p class="video-lesson">"ผู้ทำกรรมดีย่อมเพลิดเพลินใจ"</p>
+          <div class="video-meta">
+            <span class="video-views">👁️ 2.3K</span>
+            <span class="video-date">📅 3 เดือนที่แล้ว</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 12 -->
+      <div class="video-card" onclick="openVideoModal('video/story-012.mp4', 'มหาชนทูลถามเรื่องพระเทวทัต', 'ผู้มีกิเลสยังไม่ล่วงพ้นย่อมไม่คู่ควรนุ่งห่มผ้ากาสาวพัสตร์')">
+        <div class="video-thumbnail">
+          <img src="รูป/story-012.png" alt="มหาชนทูลถามเรื่องพระเทวทัต">
+          <div class="play-overlay">
+            <div class="play-icon">▶</div>
+          </div>
+          <span class="video-duration">10:00</span>
+        </div>
+        <div class="video-info">
+          <h3 class="video-title">มหาชนทูลถามเรื่องพระเทวทัต</h3>
+          <p class="video-lesson">"ผู้มีกิเลสย่อมไม่คู่ควรนุ่งห่มผ้ากาสาว"</p>
+          <div class="video-meta">
+            <span class="video-views">👁️ 5.1K</span>
+            <span class="video-date">📅 4 เดือนที่แล้ว</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 13 -->
+      <div class="video-card" onclick="openVideoModal('video/story-013.mp4', 'พระโกกาลิกะ', 'คนพาลเมื่อพูดคำชั่วร้ายย่อมใช้ขวานฟันตัวเอง')">
+        <div class="video-thumbnail">
+          <img src="รูป/story-013.png" alt="พระโกกาลิกะ">
+          <div class="play-overlay">
+            <div class="play-icon">▶</div>
+          </div>
+          <span class="video-duration">8:45</span>
+        </div>
+        <div class="video-info">
+          <h3 class="video-title">พระโกกาลิกะ</h3>
+          <p class="video-lesson">"คนพาลพูดคำชั่วย่อมฟันตัวเอง"</p>
+          <div class="video-meta">
+            <span class="video-views">👁️ 3.7K</span>
+            <span class="video-date">📅 4 เดือนที่แล้ว</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 14 -->
+      <div class="video-card" onclick="openVideoModal('video/story-014.mp4', 'พระโสภิตเถระ', 'จิตที่ได้รับการแผ้วถางย่อมเข้าถึงสัจธรรมได้รวดเร็ว')">
+        <div class="video-thumbnail">
+          <img src="รูป/story-014.png" alt="พระโสภิตเถระ">
+          <div class="play-overlay">
+            <div class="play-icon">▶</div>
+          </div>
+          <span class="video-duration">7:30</span>
+        </div>
+        <div class="video-info">
+          <h3 class="video-title">พระโสภิตเถระ</h3>
+          <p class="video-lesson">"จิตที่แผ้วถางดีย่อมเข้าถึงสัจธรรม"</p>
+          <div class="video-meta">
+            <span class="video-views">👁️ 1.9K</span>
+            <span class="video-date">📅 5 เดือนที่แล้ว</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 15 -->
+      <div class="video-card" onclick="openVideoModal('video/story-015.mp4', 'พระอุบลวรรณาเถรี', 'ผู้มีจิตสงบระงับแล้วย่อมใช้ชีวิตอย่างเป็นสุข')">
+        <div class="video-thumbnail">
+          <img src="รูป/story-015.png" alt="พระอุบลวรรณาเถรี">
+          <div class="play-overlay">
+            <div class="play-icon">▶</div>
+          </div>
+          <span class="video-duration">9:15</span>
+        </div>
+        <div class="video-info">
+          <h3 class="video-title">พระอุบลวรรณาเถรี</h3>
+          <p class="video-lesson">"ผู้มีจิตสงบย่อมใช้ชีวิตอย่างเป็นสุข"</p>
+          <div class="video-meta">
+            <span class="video-views">👁️ 2.8K</span>
+            <span class="video-date">📅 5 เดือนที่แล้ว</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 16 -->
+      <div class="video-card" onclick="openVideoModal('video/story-016.mp4', 'นันทิยอุบาสก', 'บุญย่อมต้อนรับผู้ทำบุญไปสู่โลกหน้า')">
+        <div class="video-thumbnail">
+          <img src="รูป/story-016.png" alt="นันทิยอุบาสก">
+          <div class="play-overlay">
+            <div class="play-icon">▶</div>
+          </div>
+          <span class="video-duration">6:50</span>
+        </div>
+        <div class="video-info">
+          <h3 class="video-title">นันทิยอุบาสก</h3>
+          <p class="video-lesson">"บุญย่อมต้อนรับผู้ทำบุญ"</p>
+          <div class="video-meta">
+            <span class="video-views">👁️ 1.4K</span>
+            <span class="video-date">📅 6 เดือนที่แล้ว</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 17 -->
+      <div class="video-card" onclick="openVideoModal('video/story-017.mp4', 'สัญชัยปริพาชก', 'บุคคลที่เข้าใจสิ่งไม่เป็นสาระว่าเป็นสาระ')">
+        <div class="video-thumbnail">
+          <img src="รูป/story-017.png" alt="สัญชัยปริพาชก">
+          <div class="play-overlay">
+            <div class="play-icon">▶</div>
+          </div>
+          <span class="video-duration">8:00</span>
+        </div>
+        <div class="video-info">
+          <h3 class="video-title">สัญชัยปริพาชก</h3>
+          <p class="video-lesson">"ผู้เข้าใจสิ่งไม่เป็นสาระว่าเป็นสาระ"</p>
+          <div class="video-meta">
+            <span class="video-views">👁️ 2.0K</span>
+            <span class="video-date">📅 6 เดือนที่แล้ว</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 18 -->
+      <div class="video-card" onclick="openVideoModal('video/story-018.mp4', 'นันทโคปาลกะ', 'โจรย่อมทำความพินาศให้แก่โจร')">
+        <div class="video-thumbnail">
+          <img src="รูป/story-018.png" alt="นันทโคปาลกะ">
+          <div class="play-overlay">
+            <div class="play-icon">▶</div>
+          </div>
+          <span class="video-duration">7:45</span>
+        </div>
+        <div class="video-info">
+          <h3 class="video-title">นันทโคปาลกะ</h3>
+          <p class="video-lesson">"โจรย่อมทำความพินาศให้แก่โจร"</p>
+          <div class="video-meta">
+            <span class="video-views">👁️ 1.6K</span>
+            <span class="video-date">📅 7 เดือนที่แล้ว</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 19 -->
+      <div class="video-card" onclick="openVideoModal('video/story-019.mp4', 'พระจิตตหัตถเถระ', 'จิตของผู้ที่ไม่มั่นคงในพระสัทธรรม')">
+        <div class="video-thumbnail">
+          <img src="รูป/story-019.png" alt="พระจิตตหัตถเถระ">
+          <div class="play-overlay">
+            <div class="play-icon">▶</div>
+          </div>
+          <span class="video-duration">8:30</span>
+        </div>
+        <div class="video-info">
+          <h3 class="video-title">พระจิตตหัตถเถระ</h3>
+          <p class="video-lesson">"จิตของผู้ไม่มั่นคงในพระสัทธรรม"</p>
+          <div class="video-meta">
+            <span class="video-views">👁️ 2.2K</span>
+            <span class="video-date">📅 7 เดือนที่แล้ว</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 20 -->
+      <div class="video-card" onclick="openVideoModal('video/story-020.mp4', 'พระกุมารกัสสปะเถระ', 'ปัญญาเปรียบเสมือนประทีปที่ส่องทางให้ชีวิต')">
+        <div class="video-thumbnail">
+          <img src="รูป/story-020.png" alt="พระกุมารกัสสปะเถระ">
+          <div class="play-overlay">
+            <div class="play-icon">▶</div>
+          </div>
+          <span class="video-duration">10:15</span>
+        </div>
+        <div class="video-info">
+          <h3 class="video-title">พระกุมารกัสสปะเถระ</h3>
+          <p class="video-lesson">"ปัญญาเปรียบเสมือนประทีปที่ส่องทาง"</p>
+          <div class="video-meta">
+            <span class="video-views">👁️ 3.5K</span>
+            <span class="video-date">📅 8 เดือนที่แล้ว</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<!-- ===== VIDEO MODAL ===== -->
+<div class="video-modal" id="videoModal">
+  <button class="video-modal-close" onclick="closeVideoModal()" aria-label="ปิด">✕</button>
+  <div class="video-modal-content">
+    <div class="video-wrapper">
+      <video id="modalVideo" controls>
+        <source src="" type="video/mp4">
+        เบราว์เซอร์ของคุณไม่รองรับวิดิโอ
+      </video>
+    </div>
+    <div class="video-modal-info">
+      <h2 class="video-modal-title" id="modalVideoTitle"></h2>
+      <p class="video-modal-desc" id="modalVideoDesc"></p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div id="footer-placeholder"></div>
+<script src="script.js"></script>
+</body>
+</html>

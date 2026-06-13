@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>นิทานทั้งหมด — นิทานธรรมบท</title>
+  <link rel="icon" href="./รูป/img11.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<video id="bg-video" autoplay muted loop playsinline>
+  <source src="video/video1.mp4" type="video/mp4">
+</video>
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <img src="./รูป/img11.png" alt="นิทานธรรมบท" width="36" height="36">
+        <span>นิทานธรรมบท</span>
+      </a>
+
+      <div class="nav-actions">
+        <div class="nav-search">
+          <input type="text" id="searchInput" placeholder="ค้นหา..." aria-label="ค้นหานิทาน">
+          <button onclick="searchStories()" aria-label="ค้นหา">🔍</button>
+        </div>
+
+        <nav class="nav-menu" id="nav-links">
+          <a href="index.html">หน้าแรก</a>
+          <a href="stories.html" class="active">นิทานทั้งหมด</a>
+          <a href="stories1.html">วิดิโอนิทาน</a>
+          <a href="about.html">เกี่ยวกับเรา</a>
+          <a href="login.html">เข้าสู่ระบบ</a>
+        </nav>
+
+        <button class="theme-toggle" onclick="toggleTheme()" id="themeToggle" aria-label="เปลี่ยนธีม">
+          <span id="themeIcon">☀️</span>
+        </button>
+
+        <button class="mobile-toggle" onclick="toggleMobileMenu()" id="mobileMenuBtn" aria-label="เมนู">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge">Library</span>
+        <h1 class="hero-title">สารบัญนิทานธรรมบท</h1>
+        <p class="hero-desc">รวบรวมเรื่องราวคติธรรมเพื่อการตื่นรู้และนำทางจิตใจสู่ความสงบ</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTENT ===== -->
+  <main class="container">
+    <div class="stories-section">
+      <div class="section-header">
+        <h2 class="section-title">รายชื่อนิทานทั้งหมด</h2>
+        <p class="section-desc">เลือกอ่านนิทานธรรมบทที่คุณสนใจจากรายการด้านล่าง</p>
+      </div>
+
+      <div class="stories-grid" id="storiesGrid">
+        <!-- Generates 20 Story Cards -->
+        <!-- Story 1 -->
+        <a href="stories/story-001.html" class="story-card">
+          <div class="card-banner banner-lotus">
+            <img src="รูป/story-001.png" alt="พระจักขุบาลเถระ" class="story-image"></div>
+          <div class="card-body">
+            <p class="card-number">เรื่องที่ ๑</p>
+            <h3 class="card-title">พระจักขุบาลเถระ</h3>
+            <p class="card-lesson">"ใจเป็นประธานในสิ่งทั้งปวง"</p>
+            <p class="card-excerpt">
+              ทุกสิ่งทุกอย่างสำเร็จได้ด้วยใจ หากบุคคลมีใจชั่วร้าย พลอยพูดชั่วทำชั่วไปด้วย ความทุกข์ย่อมตามหลังเขาไป</p>      
+            </p>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag">ธรรมบท</span>
+            <span class="read-btn">อ่านเรื่องนี้</span>
+          </div>
+        </a>
+        <!-- Story 2 -->
+        <a href="stories/story-002.html" class="story-card">
+          <div class="card-banner banner-lotus">
+            <img src="รูป/story-002.png" alt="พระจักขุบาลเถระ" class="story-image"></div>
+          <div class="card-body">
+            <p class="card-number">เรื่องที่ ๒</p>
+            <h3 class="card-title">มัฏฐกุณฑลีมาณพ</h3>
+            <p class="card-lesson">"ใจเป็นประธานในสิ่งทั้งปวง"</p>
+            <p class="card-excerpt">เมื่อความตระหนี่ถี่เหนียวของบิดาเกือบส่งลูกชายลงนรก... สู่ปาฏิหาริย์แห่งดวงจิตสุดท้ายที่เล่งเห็นพระพุทธคุณ</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag">ธรรมบท</span>
+            <span class="read-btn">อ่านเรื่องนี้</span>
+          </div>
+        </a>
+        <!-- Story 3 -->
+        <a href="stories/story-003.html" class="story-card">
+          <div class="card-banner banner-crimson">
+            <img src="รูป/story-003.png" alt="พระจักขุบาลเถระ" class="story-image"></div>
+          <div class="card-body">
+            <p class="card-number">เรื่องที่ ๓</p>
+            <h3 class="card-title">พระติสสเถระ</h3>
+            <p class="card-lesson">"เวรย่อมไม่ระงับด้วยการจองเวร"</p>
+            <p class="card-excerpt">"เมื่อ 'อัตตา' และ 'ความถือตัว' ว่าเป็นญาติสนิทของศาสดา ทำให้หลวงตาแก่วางโตอวดเบ่งกลางโรงฉัน ทว่าพอโดนตักเตือนกลับร้องไห้โฮไม่ยอมอโหสิกรรม</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag">ธรรมบท</span>
+            <span class="read-btn">อ่านเรื่องนี้</span>
+          </div>
+        </a>
+        <!-- Story 4 -->
+        <a href="stories/story-004.html" class="story-card">
+          <div class="card-banner banner-lotus">
+            <img src="รูป/story-004.png" alt="พระจักขุบาลเถระ" class="story-image"></div>
+          <div class="card-body">
+            <p class="card-number">เรื่องที่ ๔</p>
+            <h3 class="card-title">นางกาลียักษิณี</h3>
+            <p class="card-lesson">"เวรย่อมไม่ระงับด้วยการจองเวร แต่ระงับได้ด้วยการไม่จองเวร"</p>
+            <p class="card-excerpt">"จากสงครามน้ำลายในบ้านสู่วิบาทกรรมเลือดข้ามภพชาติ! เมื่อความอิจฉาริษยาทำให้เมียหลวงแอบวางยาขับเลือด</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag">ธรรมบท</span>
+            <span class="read-btn">อ่านเรื่องนี้</span>
+          </div>
+        </a>
+        <!-- Story 5 -->
+        <a href="stories/story-005.html" class="story-card">
+          <div class="card-banner banner-lotus">
+            <img src="รูป/story-005.png" alt="พระจักขุบาลเถระ" class="story-image"></div>
+          <div class="card-body">
+            <p class="card-number">เรื่องที่ ๕</p>
+            <h3 class="card-title">พระนันทเถระ</h3>
+            <p class="card-lesson">"จิตที่ฝึกมาไม่ดี ย่อมถูกราคะและความทุกข์ครอบงำได้ง่าย"</p>
+            <p class="card-excerpt">เมื่อวิวาห์ล่มเพราะพระเชษฐาผู้เป็นศาสดามาบิณฑบาต! เรื่องราวของเจ้าชายนันทะผู้ถูกคลุมจีวรพาเข้าวัดในวันแต่งงาน</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag">ธรรมบท</span>
+            <span class="read-btn">อ่านเรื่องนี้</span>
+          </div>
+        </a>
+        <!-- Story 6 -->
+        <a href="stories/story-006.html" class="story-card">
+          <div class="card-banner banner-earth">
+            <img src="รูป/story-006.png" alt="พระจักขุบาลเถระ" class="story-image"></div>
+          <div class="card-body">
+            <p class="card-number">เรื่องที่ ๖</p>
+            <h3 class="card-title">ปัณฑิตสามเณร</h3>
+            <p class="card-lesson">"ชาวนาขุดทางไขน้ำย่อมนำน้ำไปได้, ช่างศรดัดลูกศรย่อมดัดให้ตรงได้, ช่างไม้ถากไม้ย่อมทำไม้ให้เป็นรูปทรงได้ฉันใด.</p>
+            <p class="card-excerpt">เมื่อวิถีธรรมชาติริมทาง กลายเป็นลายแทงธรรมนำทางสู่การหลุดพ้น! เรื่องราวของสามเณรน้อยวัย 7 ขวบ ผู้มีปัญญาเฉียบแหลม ช่างสังเกตการ</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag">ธรรมบท</span>
+            <span class="read-btn">อ่านเรื่องนี้</span>
+          </div>
+        </a>
+        <!-- Story 7 -->
+        <a href="stories/story-007.html" class="story-card">
+          <div class="card-banner banner-lotus">
+            <img src="รูป/story-007.png" alt="พระจักขุบาลเถระ" class="story-image"></div>
+          <div class="card-body">
+            <p class="card-number">เรื่องที่ ๗</p>
+            <h3 class="card-title">พระมหากาลเถระ</h3>
+            <p class="card-lesson">บุคคลผู้ตามเห็นสิ่งสวยงามในโลก ไม่สำรวมในอินทรีย์ ไม่รู้ประมาณในอาหาร เกียจคร้าน มารย่อมพ่ายแพ้เขา เหมือนลมพัดต้นไม้ที่ผุพัง</p>
+            <p class="card-excerpt">เมื่อพี่ชายสละผ้าคฤหบดีมุ่งสู่ป่าช้าเพื่อเจริญมรณานุสติ แต่น้องชายกลับวางแผนส่งอดีตภรรยามาล่อลวงให้สึก!</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag">ธรรมบท</span>
+            <span class="read-btn">อ่านเรื่องนี้</span>
+          </div>
+        </a>
+        <!-- Story 8 -->
+        <a href="stories/story-008.html" class="story-card">
+          <div class="card-banner banner-jade">
+            <img src="รูป/story-008.png" alt="พระจักขุบาลเถระ" class="story-image"></div>
+          <div class="card-body">
+            <p class="card-number">เรื่องที่ ๘</p>
+            <h3 class="card-title">พระเทวทัต</h3>
+            <p class="card-lesson">ผู้ทำกรรมชั่วย่อมเดือดร้อนในโลกทั้งสอง</p>
+            <p class="card-excerpt">เมื่อฤทธิ์เดชอันอัศจรรย์กลับกลายเป็นอาวุธร้ายทำลายตนเอง! เรื่องราวของพระเทวทัตผู้ปล่อยให้ความอิจฉาริษยาเข้าครอบงำจิตใจ</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag">ธรรมบท</span>
+            <span class="read-btn">อ่านเรื่องนี้</span>
+          </div>
+        </a>
+        <!-- Story 9 -->
+        <a href="stories/story-009.html" class="story-card">
+          <div class="card-banner banner-crimson">
+            <img src="รูป/story-009.png" alt="พระจักขุบาลเถระ" class="story-image"></div>
+          <div class="card-body">
+            <p class="card-number">เรื่องที่ ๙</p>
+            <h3 class="card-title">นางจิญจมาณวิกา</h3>
+            <p class="card-lesson">"บุคคลผู้ล่วงละเมิดธรรมข้อหนึ่ง คือ การพูดเท็จ (มุสาวาท) โดยไม่มีความละอาย และไม่เชื่อเรื่องโลกหน้า ย่อมไม่มีบาปกรรมใด ๆ ที่เขาจะทำไม่ได้"</p>
+            <p class="card-excerpt">เมื่อความอิจฉาริษยาของลัทธิอื่น นำมาซึ่งแผนการสกปรกระดับสั่นสะเทือนศรัทธา! เรื่องราวของนางจิญจมาณวิกา</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag">ธรรมบท</span>
+            <span class="read-btn">อ่านเรื่องนี้</span>
+          </div>
+        </a>
+        <!-- Story 10 -->
+        <a href="stories/story-010.html" class="story-card">
+          <div class="card-banner banner-gold">
+            <img src="รูป/story-010.png" alt="พระจักขุบาลเถระ" class="story-image"></div>
+          <div class="card-body">
+            <p class="card-number">เรื่องที่ ๑๐</p>
+            <h3 class="card-title">นายจุนทสูกริก</h3>
+            <p class="card-lesson">ผู้ทำกรรมชั่วย่อมเดือดร้อนใจในโลกทั้งสอง</p>
+            <p class="card-excerpt">เมื่อเสียงกรีดร้องของชีวิตนับพัน ย้อนกลับมาดังก้องในร่างของตนเอง!</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag">ธรรมบท</span>
+            <span class="read-btn">อ่านเรื่องนี้</span>
+          </div>
+        </a>
+        <!-- Story 11 -->
+        <a href="stories/story-011.html" class="story-card">
+          <div class="card-banner banner-blue">
+            <img src="รูป/story-011.png" alt="พระจักขุบาลเถระ" class="story-image"></div>
+          <div class="card-body">
+            <p class="card-number">เรื่องที่ ๑๑</p>
+            <h3 class="card-title">ธัมมิกอุบาสก</h3>
+            <p class="card-lesson">ผู้ทำกรรมดีย่อมเพลิดเพลินใจในโลกทั้งสอง</p>
+            <p class="card-excerpt">เมื่อผลแห่งความดีแปรเปลี่ยนเป็นทิพยสมบัติลอยอยู่ตรงหน้า!</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag">ธรรมบท</span>
+            <span class="read-btn">อ่านเรื่องนี้</span>
+          </div>
+        </a>
+        <!-- Story 12 -->
+        <a href="stories/story-012.html" class="story-card">
+          <div class="card-banner banner-earth">
+            <img src="รูป/story-012.png" alt="พระจักขุบาลเถระ" class="story-image"></div>
+          <div class="card-body">
+            <p class="card-number">เรื่องที่ ๑๒</p>
+            <h3 class="card-title">มหาชนทูลถามเรื่องพระเทวทัต</h3>
+            <p class="card-lesson">ผู้ใดที่ยังมีกิเลสน้ำย้อม (ราคะ โทสะ โมหะ) ยังไม่ล่วงพ้น ปราศจากความสำรวมและสัจจะ วาจา ผู้นั้นย่อมไม่คู่ควรที่จะนุ่งห่มผ้ากาสาวพัสตร์.</p>
+            <p class="card-excerpt">เมื่อข่าวลือเรื่อง 'ธรณีสูบ' กลายเป็นทอล์กออฟเดอะทาวน์ที่เขย่าขวัญคนทั้งพระนคร!</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag">ธรรมบท</span>
+            <span class="read-btn">อ่านเรื่องนี้</span>
+          </div>
+        </a>
+        <!-- Story 13 -->
+        <a href="stories/story-013.html" class="story-card">
+          <div class="card-banner banner-lotus">
+            <img src="รูป/story-013.png" alt="พระจักขุบาลเถระ" class="story-image"></div>
+          <div class="card-body">
+            <p class="card-number">เรื่องที่ ๑๓</p>
+            <h3 class="card-title">พระโกกาลิกะ</h3>
+            <p class="card-lesson">ขวานเกิดประจำอยู่ที่ปากของบุรุษแล้ว... คนพาลเมื่อพูดคำชั่วร้าย ย่อมใช้ขวานนั้นฟันตัวเอง</p>
+            <p class="card-excerpt">เมื่อคำโกหกพ่นพิษใส่พระอรหันต์ สู่จุดจบที่ร่างกายพุพองแหลกสลาย!</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag">ธรรมบท</span>
+            <span class="read-btn">อ่านเรื่องนี้</span>
+          </div>
+        </e>
+        <!-- Story 14 -->
+        <a href="stories/story-014.html" class="story-card">
+          <div class="card-banner banner-jade">
+            <img src="รูป/story-014.png" alt="พระจักขุบาลเถระ" class="story-image"></div>
+          <div class="card-body">
+            <p class="card-number">เรื่องที่ ๑๔</p>
+            <h3 class="card-title">พระโสภิตเถระ</h3>
+            <p class="card-lesson">ทางที่บุคคลแผ้วถางดีแล้ว ย่อมนำพาไปสู่จุดหมายได้รวดเร็วฉันใด จิตที่ได้รับการแผ้วถางกิเลสและอบรมปัญญามาดีแล้ว ย่อมเข้าถึงสัจธรรมและญาณทัศนะได้อย่างรวดเร็วฉันนั้น</p>
+            <p class="card-excerpt">เมื่อสมุดบันทึกแห่งภพชาติถูกเปิดออกอย่างแม่นยำและรวดเร็วกว่าใคร!</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag">ธรรมบท</span>
+            <span class="read-btn">อ่านเรื่องนี้</span>
+          </div>
+        </a>
+        <!-- Story 15 -->
+        <a href="stories/story-015.html" class="story-card">
+          <div class="card-banner banner-crimson">
+            <img src="รูป/story-015.png" alt="พระจักขุบาลเถระ" class="story-image"></div>
+          <div class="card-body">
+            <p class="card-number">เรื่องที่ ๑๕</p>
+            <h3 class="card-title">พระอุบลวรรณาเถรี</h3>
+            <p class="card-lesson">ผู้ใดมีจิตสงบระงับแล้ว ตัดตัณหาได้ขาด ย่อมใช้ชีวิตอยู่อย่างเป็นสุข เปรียบเหมือนดอกบัวที่เกิดในน้ำ แต่ไม่เปียกด้วยน้ำ</p>
+            <p class="card-excerpt">เมื่อความงามอันล่มเมืองกลายเป็นบ่วงรัดรั้ง จนต้องสละโลกรสสู่ร่มเงาแห่งกาสาวพัสตร์!</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag">ธรรมบท</span>
+            <span class="read-btn">อ่านเรื่องนี้</span>
+          </div>
+        </a>
+        <!-- Story 16 -->
+        <a href="stories/story-016.html" class="story-card">
+          <div class="card-banner banner-gold">
+            <img src="รูป/story-016.png" alt="พระจักขุบาลเถระ" class="story-image"></div>
+          <div class="card-body">
+            <p class="card-number">เรื่องที่ ๑๖</p>
+            <h3 class="card-title">นันทิยอุบาสก</h3>
+            <p class="card-lesson">บุญย่อมต้อนรับผู้ทำบุญ ซึ่งไปจากโลกนี้สู่โลกหน้า เหมือนญาติรับญาติที่รักผู้เดินทางกลับมาฉะนั้น</p>
+            <p class="card-excerpt">เมื่ออิฐก้อนแรกของกุฏิสงฆ์ถูกวางบนโลก ทองคำและแก้วมณีของวิมานทิพย์ก็ก่อตัวขึ้นบนสวรรค์!</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag">ธรรมบท</span>
+            <span class="read-btn">อ่านเรื่องนี้</span>
+          </div>
+        </a>
+        <!-- Story 17 -->
+        <a href="stories/story-017.html" class="story-card">
+          <div class="card-banner banner-blue">
+            <img src="รูป/story-017.png" alt="พระจักขุบาลเถระ" class="story-image"></div>
+          <div class="card-body">
+            <p class="card-number">เรื่องที่ ๑๗</p>
+            <h3 class="card-title">สัญชัยปริพาชก</h3>
+            <p class="card-lesson">บุคคลที่เข้าใจในสิ่งที่ไม่เป็นสาระว่าเป็นสาระ และเห็นสิ่งที่เป็นสาระว่าไม่เป็นสาระ มีความดำริผิดเป็นโคจร ย่อมไม่ประสบสิ่งที่เป็นสาระเลย</p>
+            <p class="card-excerpt">เมื่อตำแหน่ง 'เจ้าสำนักใหญ่' กลายเป็นโซ่ตรวนผูกมัดดวงตาไม่ให้เห็นธรรม!</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag">ธรรมบท</span>
+            <span class="read-btn">อ่านเรื่องนี้</span>
+          </div>
+        </a>
+        <!-- Story 18 -->
+        <a href="stories/story-018.html" class="story-card">
+          <div class="card-banner banner-earth">
+            <img src="รูป/story-018.png" alt="พระจักขุบาลเถระ" class="story-image"></div>
+          <div class="card-body">
+            <p class="card-number">เรื่องที่ ๑๘</p>
+            <h3 class="card-title">นันทโคปาลกะ</h3>
+            <p class="card-lesson">โจรย่อมทำความพินาศให้แก่โจร, คนจองเวรย่อมทำความพินาศให้แก่คนจองเวร..</p>
+            <p class="card-excerpt">เมื่อแสงสว่างแห่งธรรมเพิ่งจุดประกาย แต่สายลมแห่งมรณกรรมกลับพัดเข้ามาพรากชีวิต!</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag">ธรรมบท</span>
+            <span class="read-btn">อ่านเรื่องนี้</span>
+          </div>
+        </a>
+        <!-- Story 19 -->
+        <a href="stories/story-019.html" class="story-card">
+          <div class="card-banner banner-lotus">
+            <img src="รูป/story-019.png" alt="พระจักขุบาลเถระ" class="story-image"></div>
+          <div class="card-body">
+            <p class="card-number">เรื่องที่ ๑๙</p>
+            <h3 class="card-title">พระจิตตหัตถเถระ</h3>
+            <p class="card-lesson">จิตของผู้ที่มีความสับส่าย (ไม่มั่นคง) ไม่รู้แจ้งในพระสัทธรรม มีความเลื่อมใสอันเลื่อนลอย ปัญญาของเขาย่อมไม่บริบูรณ์.</p>
+            <p class="card-excerpt">เมื่อผ้าเหลืองไม่ใช่คำตอบสุดท้าย และผ้าลายก็ไม่ใช่ความสุขที่แท้จริง!</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag">ธรรมบท</span>
+            <span class="read-btn">อ่านเรื่องนี้</span>
+          </div>
+        </a>
+        <!-- Story 20 -->
+        <a href="stories/story-020.html" class="story-card">
+          <div class="card-banner banner-jade">
+            <img src="รูป/story-020.png" alt="พระจักขุบาลเถระ" class="story-image"></div>
+          <div class="card-body">
+            <p class="card-number">เรื่องที่ ๒๐</p>
+            <h3 class="card-title">พระกุมารกัสสปะเถระ</h3>
+            <p class="card-lesson">ปัญญาเปรียบเสมือนประทีปที่ส่องทางให้ชีวิต</p>
+            <p class="card-excerpt">เมื่อคำครหาเรื่อง 'สายเลือดอื้อฉาว' กลายเป็นพลังผลักดันสู่ยอดปัญญา!</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag">ธรรมบท</span>
+            <span class="read-btn">อ่านเรื่องนี้</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <div id="footer-placeholder"></div>
+  <script src="script.js"></script>
+</body>
+</html>

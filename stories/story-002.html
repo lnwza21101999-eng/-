@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[ชื่อเรื่อง] — นิทานธรรมบท</title>
+  <link rel="icon" href="../รูป/img11.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-logo">
+        <img src="../รูป/img11.png" alt="นิทานธรรมบท" width="36" height="36">
+        <span>นิทานธรรมบท</span>
+      </a>
+
+      <div class="nav-actions">
+        <div class="nav-search">
+          <input type="text" id="searchInput" placeholder="ค้นหา..." aria-label="ค้นหานิทาน">
+          <button onclick="searchStories()" aria-label="ค้นหา">🔍</button>
+        </div>
+
+        <nav class="nav-menu" id="nav-links">
+          <a href="../index.html">หน้าแรก</a>
+          <a href="../stories.html">นิทานทั้งหมด</a>
+          <a href="stories1.html">วิดิโอนิทาน</a>
+          <a href="../about.html">เกี่ยวกับเรา</a>
+          <a href="../login.html">เข้าสู่ระบบ</a>
+        </nav>
+
+        <button class="theme-toggle" onclick="toggleTheme()" id="themeToggle" aria-label="เปลี่ยนธีม">
+          <span id="themeIcon">☀️</span>
+        </button>
+
+        <button class="mobile-toggle" onclick="toggleMobileMenu()" id="mobileMenuBtn" aria-label="เมนู">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge">นิทานธรรมบท</span>
+        <h1 class="hero-title">มัฏฐกุณฑลีมาณพ</h1>
+        <p class="hero-desc">
+          "เมื่อความตระหนี่ถี่เหนียวของบิดาเกือบส่งลูกชายลงนรก... สู่ปาฏิหาริย์แห่งดวงจิตสุดท้ายที่เล่งเห็น
+          พระพุทธคุณ เพียงแค่ 'ตั้งจิตเลื่อมใส' ก่อนสิ้นลม ก็สามารถเปลี่ยนโศกนาฏกรรมของมนุษย์ขี้เหนียว ให้
+          กลายเป็นวิมานทองคำบนสรวงสวรรค์ พร้อมบทเรียนดัดหลังแทงใจดำที่ทำให้คนเป็นพ่อต้องหลั่งน้ำตา"
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STORY CONTENT ===== -->
+  <main class="container">
+    <div class="stories-section" style="max-width: 800px; margin: 0 auto;">
+
+      <!-- Image Placeholder -->
+      <div class="story-banner" style="text-align: center; margin-bottom: 3rem;">
+        <img src="../รูป/story-002.png" alt="รูปประกอบนิทาน" style="width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border);">
+      </div>
+
+      <!-- Story Text -->
+      <div class="modal-body" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2.5rem;">
+        <div class="story-text">
+          <p>ในเมืองสาวัตถี มีพราหมณ์มหาเศรษฐีผู้หนึ่งชื่อว่า "อทินนปุพพกะ" (ผู้ไม่เคยให้อะไรแก่ใคร) เขาเป็นคนขี้
+            เหนียวจัด ถึงขนาดทำต่างหูให้ลูกชายคนเดียวที่ชื่อ "มัฏฐกุณฑลี" ก็ยังทุบทองทำเองเพราะกลัวเสียค่าแรง
+            ช่าง คนทั่วไปจึงเรียกเด็กหนุ่มว่า "ผู้มีต่างหูเกลี้ยง" จนกระทั่งอายุ 16 ปี มัฏฐกุณฑลีล้มป่วยหนักด้วยโรค
+            ดีซ่าน พราหมณ์ผู้เป็นพ่อกลัวเสียเงินค่าหมอและค่ายา จึงแอบเดินไปเนียนถามสูตรยาจากหมอคนอื่นแล้ว
+            มาขุดรากไม้ต้มให้ลูกกินเองตามมีตามเกิด อาการจึงทรุดหนักจนใกล้ตาย และด้วยความตระหนี่กลัวคนมา
+            เยี่ยมไข้จะเห็นสมบัติในบ้าน พราหมณ์อุ้มร่างอันผอมโซของลูกชายออกมานอนทิ้งไว้ที่ระเบียงนอกบ้านอย่างเดียวดาย
+          </p>
+          <p>เช้าวันนั้น พระพุทธเจ้าทรงตรวจดูสัตว์โลกด้วยพระญาณ ทรงเห็นว่ามัฏฐกุณฑลีมาณพกำลังจะสิ้นใจและ
+            สามารถโปรดได้ จึงเสด็จไปยืนยิ้มโปรดที่หน้าบ้านพราหมณ์ ขณะนั้นเด็กหนุ่มนอนหันหน้าเข้าข้างฝาบ้าน
+            ไม่มีแรงแม้แต่จะพลิกตัว พระพุทธเจ้าจึงทรงเปล่ง "ฉัพพรรณรังสี" (รัศมี 6 ประการ) วาบไปกระทบฝาผนัง
+            เด็กหนุ่มเห็นแสงสว่างจึงค่อย ๆ พลิกตัวมามอง เมื่อเห็นพระพุทธเจ้าเสด็จมาโปรด จิตใจก็พองโตด้วยความ
+            เลื่อมใสอย่างสุดซึ้ง เขารู้ตัวว่าร่างกายไม่มีแรงจะลุกกราบหรือเอ่ยปากพูด จึงทำสิ่งเดียวที่ทำได้คือ "น้อมจิต
+            ระลึกถึงพระพุทธคุณ ตั้งมั่นความเลื่อมใสอย่างบริสุทธิ์ลงในใจ" ทันทีที่พระพุทธเจ้าคล้อยหลัง เด็กหนุ่มก็
+            สิ้นใจตาย และด้วยอานุภาพแห่งจิตเลื่อมใสนั้น ส่งผลให้เขาไปอุบัติใหม่เป็น "มัฏฐกุณฑลีเทพบุตร" บนสวรรค์ชั้นดาวดึงส์ทันที
+          </p>
+          <p>หลังงานศพ พราหมณ์ผู้เป็นพ่อโศกเศร้ามาก ไปนั่งร้องไห้กอดกองขี้เถ้าที่ป่าช้าทุกวัน มัฏฐกุณฑลีเทพบุตร
+            เห็นดังนั้นจึงต้องการลงมาดัดสันดานพ่อให้ตื่นจากมิจฉาทิฐิ จึงแปลงกายเป็นมนุษย์หน้าตาเหมือนเดิม แต่งตัวงดงามมา
+            ยืนร้องไห้อยู่ใกล้ ๆ พราหมณ์เดินเข้าไปถามว่าร้องไห้ทำไม เทพบุตรแปลงแกล้งตอบว่า "ฉันมีรถทองคำ แต่ไม่มี 'ล้อ
+            รถ' ตอนนี้เสียใจมาก" พราหมณ์รีบเสนอตัวทันทีว่าจะหาล้อทองคำหรือแก้วมณีมาให้ เทพบุตรจึงย้อนเกล็ดว่า "งั้น
+            ลุงช่วยไปสอยเอาพระจันทร์กับพระอาทิตย์บนฟ้ามาทำล้อรถให้ฉันหน่อย" พราหมณ์ด่าสวนทันทีว่าบ้า เป็นไปไม่ได้
+            เทพบุตรจึงตอกกลับแทงใจดำว่า:
+            "ลุง... พระจันทร์พระอาทิตย์ยังมองเห็นแสงสว่างอยู่บนฟ้า ลุงยังว่าฉันบ้าที่อยากได้... แต่ลูกชายลุงตายไปเป็นเถ้า
+            ถ่าน มองไม่เห็นแล้ว ลุงยังมาร้องไห้อยากได้เขากลับคืนมา ระหว่างเราสองคน ใครมันโง่และบ้ากว่ากัน?"
+            พราหมณ์ได้สติตื่นจากความเศร้าทันที เทพบุตรจึงแสดงร่างจริงสว่างไสวและเล่าว่าตนไปเกิดเป็นเทวดาเพราะจิต
+            เลื่อมใสในพระพุทธเจ้า ก่อนจะบินกลับสวรรค์ พราหมณ์ซาบซึ้งมาก รีบกลับบ้านไปจัดงานเลี้ยงใหญ่และนิมนต์
+            พระพุทธเจ้ามาฉันภัตตาหาร พราหมณ์ทูลถามต่อหน้าชาวเมืองว่าแค่ทำใจเลื่อมใสไม่ได้ทำทานจะไปสวรรค์ได้จริง
+            หรือ พระพุทธเจ้าจึงทรงเนรมิตให้มัฏฐกุณฑลีเทพบุตรลอยลงมายืนยันเหตุการณ์ทั้งหมด ทำให้ผู้คนนับหมื่นดวงตาเห็นธรรมในวันนั้น
+          </p>
+        </div>
+
+        <!-- Moral Box -->
+        <div class="moral-box">
+          <p class="moral-label">คติธรรมที่ได้รับ</p>
+          <p class="moral-text">"
+            ใจเป็นประธานในสิ่งทั้งปวง" ทุกสิ่งสำเร็จได้ด้วยใจ หากบุคคลมีใจผ่องใส (สัมมาทิฐิ) พลอยพูดดีทำดี หรือแม้แต่
+            เพียงตั้งจิตเลื่อมใสในสิ่งอันเป็นบุญกุศล ความสุขความเจริญย่อมตามหลังเขาไป เหมือนเงาที่ตามตนไปทุกหนทุก
+            แห่งฉะนั้น
+          </p>
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div style="display: flex; justify-content: space-between; align-items: center; margin: 3rem 0; gap: 1rem;">
+        <a href="story-001.html" class="btn" style="border: 1px solid var(--border); padding: 0.75rem 1.5rem; border-radius: 50px; color: var(--text-primary); text-align: center;">
+          ← เรื่องก่อนหน้า
+        </a>
+
+        <a href="../index.html" class="btn btn-primary" style="text-align: center;">กลับหน้าหลัก</a>
+
+        <a href="story-003.html" class="btn" style="border: 1px solid var(--border); padding: 0.75rem 1.5rem; border-radius: 50px; color: var(--text-primary); text-align: center;">
+          เรื่องถัดไป →
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="../script.js"></script>
+</body>
+</html>

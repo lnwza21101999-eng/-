@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[ชื่อเรื่อง] — นิทานธรรมบท</title>
+  <link rel="icon" href="../รูป/img11.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-logo">
+        <img src="../รูป/img11.png" alt="นิทานธรรมบท" width="36" height="36">
+        <span>นิทานธรรมบท</span>
+      </a>
+
+      <div class="nav-actions">
+        <div class="nav-search">
+          <input type="text" id="searchInput" placeholder="ค้นหา..." aria-label="ค้นหานิทาน">
+          <button onclick="searchStories()" aria-label="ค้นหา">🔍</button>
+        </div>
+
+        <nav class="nav-menu" id="nav-links">
+          <a href="../index.html">หน้าแรก</a>
+          <a href="../stories.html">นิทานทั้งหมด</a>
+          <a href="stories1.html">วิดิโอนิทาน</a>
+          <a href="../about.html">เกี่ยวกับเรา</a>
+          <a href="../login.html">เข้าสู่ระบบ</a>
+        </nav>
+
+        <button class="theme-toggle" onclick="toggleTheme()" id="themeToggle" aria-label="เปลี่ยนธีม">
+          <span id="themeIcon">☀️</span>
+        </button>
+
+        <button class="mobile-toggle" onclick="toggleMobileMenu()" id="mobileMenuBtn" aria-label="เมนู">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge">นิทานธรรมบท</span>
+        <h1 class="hero-title">นายจุนทสูกริก (คนฆ่าหมูผู้รับกรรม)</h1>
+        <p class="hero-desc">
+          "เมื่อเสียงกรีดร้องของชีวิตนับพัน ย้อนกลับมาดังก้องในร่างของตนเอง! เรื่องราวของนายจุนทสูกริก ชายผู้ยึดชีพ
+          ฆ่าหมูเลี้ยงปากท้องมายาวนานกว่า 30 ปี โดยไร้ความปรานี สู่ภาพกรรมนิมิตสุดท้ายที่ทรมานแสนสาหัสจนต้อง
+          คลานสี่ขาและร้องเป็นเสียงหมูทั่วบ้านยาวนานถึง 7 วัน ก่อนที่ไฟนรกจะปะทุขึ้นมาเผาผลาญร่าง"
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STORY CONTENT ===== -->
+  <main class="container">
+    <div class="stories-section" style="max-width: 800px; margin: 0 auto;">
+
+      <!-- Image Placeholder -->
+      <div class="story-banner" style="text-align: center; margin-bottom: 3rem;">
+        <img src="../รูป/story-010.png" alt="รูปประกอบนิทาน" style="width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border);">
+      </div>
+
+      <!-- Story Text -->
+      <div class="modal-body" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2.5rem;">
+        <div class="story-text">
+          <p>ในเมืองสาวัตถี มีชายคนหนึ่งชื่อว่า "จุนทสูกริก" (แปลว่า นายจุนทะผู้ฆ่าหมู) เขาประกอบอาชีพทำมาหากินด้วยการ
+            ฆ่าหมูขายมาเป็นเวลานานกว่า 30 ปี บ้านของเขาอยู่ไม่ไกลจากวัดพระเชตวัน แต่ทว่าตลอดชีวิตเขาไม่เคยเข้าวัด ไม่
+            เคยถวายทาน ไม่เคยฟังธรรม และไม่เคยทำความดีใด ๆ เลยแม้แต่ครั้งเดียว วิธีการล้มหมูของนายจุนทะนั้นโหด
+            เหี้ยมมาก เขาจะมัดหมูไว้กับหลักอย่างแน่นหนา จากนั้นจะใช้ไม้พลองขนาดใหญ่ทุบไปที่ตัวหมูจนเนื้อของมันบวมช้ำ
+            (เขาเชื่อว่าทำแบบนี้แล้วเนื้อจะนุ่มและพองโต) จากนั้นจะจับปากหมูง้างออก แล้วกรอกน้ำเดือดจัดลงไปในคอหมู
+            เพื่อล้างลำไส้และสิ่งสกปรกภายในออกมาก่อนซ้ำ ๆ เมื่อหมูขับถ่ายสิ่งสกปรกออกมาจนหมดและสิ้นใจ เขวจึงจะ
+            จัดการแล่เนื้อไปขาย ทำเช่นนี้ซ้ำแล้วซ้ำเล่าเป็นอาจิณกรรม (กรรมที่ทำเป็นประจำ)
+          </p>
+          <p>กาลเวลาผ่านไปจนกระทั่งนายจุนทะเข้าสู่วัยชรา ร่างกายเริ่มเสื่อมโทรมลงและล้มป่วยลงอย่างรุนแรง ในช่วง 7 วัน
+            สุดท้ายก่อนที่เขาจะสิ้นใจ "กรรมนิมิต" (ภาพความชั่วร้ายที่เคยทำ) ได้ปรากฏขึ้นในจิตใจอย่างเด่นชัด ไฟจากอเวจี
+            มหานรกได้แผ่ความร้อนระอุขึ้นมาปรากฏแก่ตัวเขา ทำให้นายจุนทะเกิดความเร่าร้อนทุรนทุรายจนทนไม่ได้
+            ทันใดนั้นเอง พฤติกรรมของเขาก็เปลี่ยนไปอย่างน่าสยดสยอง นายจุนทะทิ้งตัวลงจากเตียงแล้ว "ก้มลงคลานสี่ขา
+            เหมือนหมู" เดินวนเวียนไปมารอบบ้าน พร้อมกับส่งเสียงร้อง "อู๊ด ๆ เอื๊อก ๆ" กรีดร้องโหยหวนด้วยความเจ็บปวด
+            ดั่งเสียงหมูที่กำลังถูกเชือดคอตลอดเวลา ทั้งภรรยาและลูก ๆ ต่างพากันตกใจกลัว พยายามเข้าฉุดจับรั้งให้เขานอน
+            ลง แต่ก็ไม่สามารถต้านทานแรงของนายจุนทะได้ เขาละเมอคลานร้องเสียงหมูดังระงมออกไปนอกบ้าน จนญาติ ๆ
+            ต้องตัดสินใจปิดประตูหน้าต่างบ้านทุกบานและขังเขาไว้ข้างในเพราะความอับอายชาวบ้าน
+          </p>
+          <p>ในระหว่าง 7 วันนั้น พระภิกษุสงฆ์ที่เดินผ่านไปมาหน้าบ้านของนายจุนทะเพื่อบิณฑบาต ได้ยินเสียงร้องกรีดร้อง
+            โหยหวนของหมูดังระงมออกมาไม่หยุดหย่อน พระภิกษุเหล่านั้นพากันเข้าใจผิด คิดว่านายจุนทะกำลังล้มหมูครั้ง
+            ใหญ่เพื่อจัดงานเลี้ยง จึงพากันเดินกลับไปกราบทูลพระพุทธเจ้าที่วัดว่า "ข้าแต่พระผู้มีพระภาคเจ้า นายจุนทสูกริก
+            คงจะฆ่าหมูเยอะมากตลอด 7 วันมานี้ เสียงหมูร้องทรมานดังลั่นไปถึงถนนเลยพระเจ้าข้า ช่างเป็นคนใจดำอำมหิตแท้ ๆ"
+            พระพุทธเจ้าทรงสดับฟังแล้วจึงตรัสเฉลยความจริงอันน่าสะพรึงกลัวแก่หมู่สงฆ์ว่า:
+            "ภิกษุทั้งหลาย นายจุนทะไม่ได้กำลังฆ่าหมูหรอก... แต่บัดนี้ วิบากกรรมชั่วที่เขาทำมาตลอด 30 ปี กำลังตามสนองเขา
+            แล้ว ไฟจากอเวจีมหานรกได้ปรากฏแก่เขาตั้งแต่วันที่เขายังไม่ตาย เขาจึงต้องคลานสี่ขาและร้องเป็นเสียงหมูด้วย
+            ความทุกข์ทรมานอย่างแสนสาหัสนับตั้งแต่วันนั้น จนถึงวันนี้ครบ 7 วันแล้ว"
+            หลังจากพระพุทธเจ้าตรัสเสร็จสิ้นลงในวันนั้นเอง นายจุนทสูกริกก็ขาดใจตายลง และร่างของเขาก็ดิ่งร่วงลงสู่อเวจี
+            มหานรกทันทีเพื่อชดใช้กรรมต่อ พระภิกษุทั้งหลายพากันกราบทูลว่า ช่างน่าอนาถใจเหลือเกินที่เขาต้องเดือดร้อน
+            ทุรนทุรายทั้งตอนอยู่และตอนตาย พระพุทธเจ้าจึงทรงตรัสพระคาถาบทสำคัญว่าด้วยผู้ทำกรรมชั่ว
+          </p>
+        </div>
+
+        <!-- Moral Box -->
+        <div class="moral-box">
+          <p class="moral-label">คติธรรมที่ได้รับ</p>
+          <p class="moral-text">
+            "ผู้ทำกรรมชั่วย่อมเดือดร้อนใจในโลกทั้งสอง" คือ ย่อมเดือดร้อนใจในโลกนี้เมื่อยามใกล้ตาย เพราะภาพกรรมนิมิต
+            อันเลวร้ายย้อนกลับมาหลอนหลอกระทบจิต และย่อมเดือดร้อนใจยิ่งกว่าในโลกหน้าเมื่อต้องไปเสวยวิบากกรรมอัน
+            เผ็ดร้อนในนรกภูมิ... บุคคลทำกรรมเช่นใด ย่อมได้รับผลแห่งกรรมนั้นตอบสนองอย่างหลีกเลี่ยงไม่ได้เลย
+          </p>
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div style="display: flex; justify-content: space-between; align-items: center; margin: 3rem 0; gap: 1rem;">
+        <a href="story-009.html" class="btn" style="border: 1px solid var(--border); padding: 0.75rem 1.5rem; border-radius: 50px; color: var(--text-primary); text-align: center;">
+          ← เรื่องก่อนหน้า
+        </a>
+
+        <a href="../index.html" class="btn btn-primary" style="text-align: center;">กลับหน้าหลัก</a>
+
+        <a href="story-011.html" class="btn" style="border: 1px solid var(--border); padding: 0.75rem 1.5rem; border-radius: 50px; color: var(--text-primary); text-align: center;">
+          เรื่องถัดไป →
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="../script.js"></script>
+</body>
+</html>
